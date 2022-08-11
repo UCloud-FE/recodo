@@ -11,10 +11,10 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "recodo-compiler": "*",
-    "recodo-doc": "*",
-    "recodo-gen": "*",
-    "recodo-live": "*"
+    "@ucloud-fe/recodo-compiler": "*",
+    "@ucloud-fe/recodo-doc": "*",
+    "@ucloud-fe/recodo-gen": "*",
+    "@ucloud-fe/recodo-live": "*"
   },
   "devDependencies": {
     "@originjs/vite-plugin-commonjs": "^1.0.3",

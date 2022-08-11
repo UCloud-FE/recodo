@@ -95,23 +95,23 @@ importers:
       '@originjs/vite-plugin-commonjs': ^1.0.3
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
+      '@ucloud-fe/recodo-compiler': '*'
+      '@ucloud-fe/recodo-doc': '*'
+      '@ucloud-fe/recodo-gen': '*'
+      '@ucloud-fe/recodo-live': '*'
       '@vitejs/plugin-react': ^2.0.0
       react: ^18.2.0
       react-dom: ^18.2.0
-      recodo-compiler: '*'
-      recodo-doc: '*'
-      recodo-gen: '*'
-      recodo-live: '*'
       typescript: ^4.6.4
       vite: ^3.0.0
       vite-plugin-commonjs: ^0.5.2
     dependencies:
+      '@ucloud-fe/recodo-compiler': link:../recodo-compiler
+      '@ucloud-fe/recodo-doc': link:../recodo-doc
+      '@ucloud-fe/recodo-gen': link:../recodo-gen
+      '@ucloud-fe/recodo-live': link:../recodo-live
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      recodo-compiler: link:../recodo-compiler
-      recodo-doc: link:../recodo-doc
-      recodo-gen: link:../recodo-gen
-      recodo-live: link:../recodo-live
     devDependencies:
       '@originjs/vite-plugin-commonjs': 1.0.3
       '@types/react': 18.0.15
@@ -172,16 +172,16 @@ importers:
 
   packages/recodo-live:
     specifiers:
+      '@ucloud-fe/recodo-compiler': ^1.0.3
       prism-react-renderer: ^1.2.1
       react: ^18
       react-simple-code-editor: ^0.11.0
-      recodo-compiler: '*'
     dependencies:
       prism-react-renderer: 1.3.5_react@18.2.0
       react-simple-code-editor: 0.11.2_react@18.2.0
     devDependencies:
+      '@ucloud-fe/recodo-compiler': link:../recodo-compiler
       react: 18.2.0
-      recodo-compiler: link:../recodo-compiler
 
 packages:
 

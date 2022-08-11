@@ -2,7 +2,7 @@
 
 > A set of document tools for React Components.
 
-[GitHub](https://github.com/ZxBing0066/recodo)
+[GitHub](https://github.com/UCloud-FE/recodo)
 [Get Started](quickStart.md)
 
 <!-- background color -->

@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZxBing0066/recodo.git"
+    "url": "git+https://github.com/UCloud-FE/recodo.git"
   },
   "keywords": [
     "React",
@@ -35,9 +35,9 @@
   "author": "ZxBing0066",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ZxBing0066/recodo/issues"
+    "url": "https://github.com/UCloud-FE/recodo/issues"
   },
-  "homepage": "https://github.com/ZxBing0066/recodo#readme",
+  "homepage": "https://github.com/UCloud-FE/recodo#readme",
   "devDependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",

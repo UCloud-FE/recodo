@@ -5,13 +5,13 @@
 ### 安装
 
 ```sh
-npm install recodo-gen
+npm install @ucloud-fe/recodo-gen
 ```
 
 ### 使用
 
 ```sh
-npx recodo-gen build -t ./components/button.jsx
+npx @ucloud-fe/recodo-gen build -t ./components/button.jsx
 ```
 
 ### 参数

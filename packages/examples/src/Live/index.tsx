@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'recodo-live';
+import { LiveProvider, LiveEditor, LivePreview, LiveError } from '@ucloud-fe/recodo-live';
 
 const codes = [
     `const D = () => {

@@ -1,5 +1,5 @@
 {
-  "name": "recodo-doc",
+  "name": "@ucloud-fe/recodo-doc",
   "version": "1.0.2",
   "description": "Docs page use data from recodo-gen",
   "main": "lib/index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZxBing0066/recodo.git"
+    "url": "git+https://github.com/UCloud-FE/recodo.git"
   },
   "author": "ZxBing0066",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ZxBing0066/recodo/issues"
+    "url": "https://github.com/UCloud-FE/recodo/issues"
   },
-  "homepage": "https://github.com/ZxBing0066/recodo#readme",
+  "homepage": "https://github.com/UCloud-FE/recodo#readme",
   "dependencies": {
     "lodash": "^4.17.21",
     "prism-react-renderer": "^1.2.1",

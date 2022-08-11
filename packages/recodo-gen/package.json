@@ -1,5 +1,5 @@
 {
-  "name": "recodo-gen",
+  "name": "@ucloud-fe/recodo-gen",
   "version": "1.2.2",
   "description": "Generate docs from React Component comment and markdown files",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZxBing0066/recodo.git",
+    "url": "git+https://github.com/UCloud-FE/recodo.git",
     "directory": "packages/recodo-gen"
   },
   "author": "ZxBing0066",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ZxBing0066/recodo/issues"
+    "url": "https://github.com/UCloud-FE/recodo/issues"
   },
-  "homepage": "https://github.com/ZxBing0066/recodo#readme",
+  "homepage": "https://github.com/UCloud-FE/recodo#readme",
   "dependencies": {
     "chokidar": "^3.5.2",
     "doctrine": "^3.0.0",

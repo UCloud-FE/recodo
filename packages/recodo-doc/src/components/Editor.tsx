@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'recodo-live';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from '@ucloud-fe/recodo-live';
 
 import github from 'prism-react-renderer/themes/github';
 import nightOwlLight from 'prism-react-renderer/themes/nightOwlLight';

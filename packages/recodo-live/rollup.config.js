@@ -1,4 +1,4 @@
 import defineRollupConfig from '../../rollup.config.base';
 import config from './package.json';
 
-export default defineRollupConfig(config, { external: ['recodo-compiler'] });
+export default defineRollupConfig(config, { external: ['@ucloud-fe/recodo-compiler'] });

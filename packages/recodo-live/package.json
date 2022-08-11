@@ -1,5 +1,5 @@
 {
-  "name": "recodo-live",
+  "name": "@ucloud-fe/recodo-live",
   "version": "1.3.2",
   "description": "Live editor and preview for React demo",
   "files": [
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZxBing0066/recodo.git"
+    "url": "git+https://github.com/UCloud-FE/recodo.git"
   },
   "author": "ZxBing0066",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ZxBing0066/recodo/issues"
+    "url": "https://github.com/UCloud-FE/recodo/issues"
   },
-  "homepage": "https://github.com/ZxBing0066/recodo#readme",
+  "homepage": "https://github.com/UCloud-FE/recodo#readme",
   "dependencies": {
     "prism-react-renderer": "^1.2.1",
     "react-simple-code-editor": "^0.11.0"
@@ -35,6 +35,6 @@
   },
   "devDependencies": {
     "react": "^18",
-    "recodo-compiler": "^1.0.3"
+    "@ucloud-fe/recodo-compiler": "^1.0.3"
   }
 }

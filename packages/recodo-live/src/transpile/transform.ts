@@ -1,4 +1,4 @@
-import { transform } from 'recodo-compiler';
+import { transform } from '@ucloud-fe/recodo-compiler';
 
 export const _poly = { assign: Object.assign };
 
