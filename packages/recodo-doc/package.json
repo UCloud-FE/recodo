@@ -1,6 +1,6 @@
 {
   "name": "@ucloud-fe/recodo-doc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Docs page use data from recodo-gen",
   "main": "lib/index.js",
   "files": [
