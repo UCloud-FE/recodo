@@ -5,7 +5,6 @@ const errorBoundary = (Element: React.ComponentType | React.ElementType, errorCa
         componentDidCatch(error: Error) {
             errorCallback(error);
         }
-
         render() {
             return typeof Element === 'function' ? <Element /> : React.isValidElement(Element) ? Element : null;
         }
