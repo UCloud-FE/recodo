@@ -26,11 +26,11 @@
     "react-markdown": "^6.0.2"
   },
   "peerDependencies": {
-    "@rapiop/mod": "^1.1.1",
+    "@ucloud-fe/mod": "^1",
     "react": "^16"
   },
   "devDependencies": {
-    "@rapiop/mod": "^1.1.1",
+    "@ucloud-fe/mod": "^1",
     "@types/react": "^16",
     "react": "^16",
     "react-dom": "^16"

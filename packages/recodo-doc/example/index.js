@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import mod from '@rapiop/mod';
-import amdResolver from '@rapiop/mod/lib/resolver/amd';
-import { moduleMap } from '@rapiop/mod/lib/module';
+import mod from '@ucloud-fe/mod';
+import amdResolver from '@ucloud-fe/mod/lib/resolver/amd';
+import { moduleMap } from '@ucloud-fe/mod/lib/module';
 
 import './index.css';
 import App from './App';

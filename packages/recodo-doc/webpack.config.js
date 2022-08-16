@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -84,11 +85,11 @@ const webpackConfig = {
             commonjs: 'react-dom',
             commonjs2: 'react-dom'
         },
-        '@rapiop/mod': {
+        '@ucloud-fe/mod': {
             root: 'mod',
-            amd: '@rapiop/mod',
-            commonjs: '@rapiop/mod',
-            commonjs2: '@rapiop/mod'
+            amd: '@ucloud-fe/mod',
+            commonjs: '@ucloud-fe/mod',
+            commonjs2: '@ucloud-fe/mod'
         }
     },
     node: {
