@@ -39,7 +39,7 @@ const Page = ({ name, reportAnchorList }: { name: string; reportAnchorList?: (an
                 pos.children.push(i);
                 pos = i;
             } else {
-                const findParent = function (level, pos) {
+                const findParent: any = function (level: any, pos: any) {
                     if (pos.level < level) {
                         return pos;
                     }

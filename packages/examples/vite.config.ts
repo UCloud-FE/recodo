@@ -9,5 +9,9 @@ export default defineConfig({
         commonjsOptions: {
             transformMixedEsModules: true
         }
+    },
+    define: {
+        'process.env': {},
+        'process.cwd': "() => ''"
     }
 });

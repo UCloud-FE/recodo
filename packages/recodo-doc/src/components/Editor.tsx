@@ -25,7 +25,7 @@ import {
 
 export const ComponentContext = createContext({});
 
-const ThemeSwitcher = ({ current, onChange }) => {
+const ThemeSwitcher = ({ current, onChange }: any) => {
     const clickHandler = useCallback(
         e => {
             const i = (e.target as Element).getAttribute('data-i');
@@ -71,7 +71,7 @@ export const Editor = ({ live, render, static: _static, noEditor, code, language
         );
         return (
             <div className={codeCls}>
-                <LiveProvider code={code} language={language}>
+                <LiveProvider code={code} language={language as any}>
                     {toolbar}
                     <div className={codeEditorCls}>
                         <LiveEditor theme={themeList[theme]} disabled />
@@ -83,7 +83,7 @@ export const Editor = ({ live, render, static: _static, noEditor, code, language
     if (render || noEditor) {
         return (
             <div className={codeCls}>
-                <LiveProvider code={code} language={language} scope={scope} modules={modules}>
+                <LiveProvider code={code} language={language as any} scope={scope} modules={modules}>
                     <div className={codePreviewCls}>
                         <LivePreview />
                         <LiveError className={codeErrorCls} />
@@ -103,7 +103,7 @@ export const Editor = ({ live, render, static: _static, noEditor, code, language
     );
     return (
         <div className={codeCls}>
-            <LiveProvider code={code} language={language} scope={scope} modules={modules}>
+            <LiveProvider code={code} language={language as any} scope={scope} modules={modules}>
                 <div className={codePreviewCls}>
                     <LivePreview />
                     <LiveError className={codeErrorCls} />
@@ -126,22 +126,23 @@ export const RemoteEditor = ({ codeUrl, ...rest }: { codeUrl: string } & Omit<Ed
         (async () => {
             try {
                 let raw = (await mod.import({ file: codeUrl, type: 'raw' })) as string;
-                let demoStartMatch = raw.match(/\/\/\s*demo\s*start\s*/);
-                let demoStartIndex = demoStartMatch
+                const demoStartMatch = raw.match(/\/\/\s*demo\s*start\s*/);
+                const demoStartIndex = demoStartMatch
                     ? (demoStartMatch.index || 0) + demoStartMatch[0].length
                     : undefined;
-                let demoEndMatch = raw.match(/\/\/\s*demo\s*end\s*/);
-                let demoEndIndex = demoEndMatch ? demoEndMatch.index : undefined;
+                const demoEndMatch = raw.match(/\/\/\s*demo\s*end\s*/);
+                const demoEndIndex = demoEndMatch ? demoEndMatch.index : undefined;
                 raw = raw.slice(demoStartIndex, demoEndIndex) + '\nreturn <Demo />;';
                 if (!mounted) return;
                 setCode(raw);
-            } catch (error) {
+            } catch (error: any) {
                 console.error(error);
                 if (!mounted) return;
                 setError(error);
             } finally {
-                if (!mounted) return;
-                setLoading(false);
+                if (mounted) {
+                    setLoading(false);
+                }
             }
         })();
         return () => {

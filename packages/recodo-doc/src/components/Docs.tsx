@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import ErrorBoundary from '../ErrorBoundary';
+import _ErrorBoundary from '../ErrorBoundary';
 import { docCls } from './cls';
 import { CodeContext } from './Code';
 import { DocContext } from './Provider';
+
+const ErrorBoundary = _ErrorBoundary as any;
 
 const Docs = ({ name, subName }: { name: string; subName?: string }) => {
     const { docMap, components } = useContext(DocContext);

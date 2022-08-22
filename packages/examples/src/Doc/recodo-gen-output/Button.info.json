@@ -1,0 +1,31 @@
+{
+    "Button": {
+        "path": "Button/Button.tsx",
+        "name": "Button",
+        "info": {
+            "description": "",
+            "displayName": "Button",
+            "methods": [],
+            "props": {
+                "children": {
+                    "required": true,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "content", "tags": [] }
+                },
+                "size": {
+                    "required": true,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'sm' | 'md' | 'lg'",
+                        "elements": [
+                            { "name": "literal", "value": "'sm'" },
+                            { "name": "literal", "value": "'md'" },
+                            { "name": "literal", "value": "'lg'" }
+                        ]
+                    },
+                    "description": { "description": "size of the button", "tags": [] }
+                }
+            }
+        }
+    }
+}

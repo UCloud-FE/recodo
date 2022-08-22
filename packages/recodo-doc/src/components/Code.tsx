@@ -1,11 +1,10 @@
 import React, { createContext, useContext } from 'react';
-
 import { Editor, RemoteEditor } from './Editor';
 import { DocContext } from './Provider';
 
 export const CodeContext = createContext<{ name?: string; subName?: string }>({});
 
-const Code = ({ children, className, live = true, render, node, inline }) => {
+const Code = ({ children, className, live = true, render, node, inline }: any) => {
     const { name, subName } = useContext(CodeContext);
     const { getRemoteUrl } = useContext(DocContext);
 
@@ -13,7 +12,7 @@ const Code = ({ children, className, live = true, render, node, inline }) => {
 
     const language = className?.replace(/language-/, '');
     const metastring = node?.data?.meta;
-    const metaOptions =
+    const metaOptions: any =
         metastring === 'static'
             ? { static: true }
             : metastring === 'noeditor'
@@ -21,7 +20,7 @@ const Code = ({ children, className, live = true, render, node, inline }) => {
             : metastring
             ? JSON.parse(metastring)
             : {};
-    let { static: _static, noEditor, codepath: codePath } = metaOptions;
+    const { static: _static, noEditor, codepath: codePath } = metaOptions;
     if (_static) {
         live = false;
         render = false;

@@ -2,13 +2,18 @@
   "name": "@ucloud-fe/recodo-doc",
   "version": "1.0.3",
   "description": "Docs page use data from recodo-gen",
-  "main": "lib/index.js",
   "files": [
-    "lib/",
-    "dist/"
+    "lib",
+    "cjs",
+    "esm",
+    "umd",
+    "types"
   ],
+  "main": "esm/index.cjs",
+  "module": "esm/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && rollup -c rollup.config.js &&  sass src/index.scss lib/doc.css"
   },
   "repository": {
     "type": "git",
@@ -23,16 +28,20 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "prism-react-renderer": "^1.2.1",
-    "react-markdown": "^6.0.2"
+    "react-markdown": "^8"
   },
   "peerDependencies": {
     "@ucloud-fe/mod": "^1",
-    "react": "^16"
+    "react": "^16",
+    "@ucloud-fe/recodo-live": "^1",
+    "@ucloud-fe/recodo-compiler": "^1"
   },
   "devDependencies": {
-    "@ucloud-fe/mod": "^1",
     "@types/react": "^16",
+    "@ucloud-fe/mod": "^1",
     "react": "^16",
-    "react-dom": "^16"
+    "react-dom": "^16",
+    "@ucloud-fe/recodo-live": "^1",
+    "@ucloud-fe/recodo-compiler": "^1"
   }
 }

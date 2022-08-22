@@ -4,18 +4,20 @@ import nightOwlLight from 'prism-react-renderer/themes/nightOwlLight';
 
 import { propsCls, propsTableCls, propsTableDeprecatedCls, propsTableDescTagTitleCls, propsTableWrapCls } from './cls';
 import { DocContext } from './Provider';
-import ErrorBoundary from '../ErrorBoundary';
+import _ErrorBoundary from '../ErrorBoundary';
 import { Hn } from './Components';
 
-const highlightCode = (code, language) =>
+const ErrorBoundary = _ErrorBoundary as any;
+
+const highlightCode = (code: any, language: any) =>
     code ? (
         <Highlight Prism={Prism} code={code} theme={nightOwlLight as PrismTheme} language={language}>
             {({ tokens, getLineProps, getTokenProps }) => (
                 <>
                     {tokens.map((line, i) => (
-                        <div {...getLineProps({ line, key: i })}>
+                        <div key={i} {...getLineProps({ line, key: i })}>
                             {line.map((token, key) => (
-                                <span {...getTokenProps({ token, key })} />
+                                <span key={key} {...getTokenProps({ token, key })} />
                             ))}
                         </div>
                     ))}
@@ -24,7 +26,7 @@ const highlightCode = (code, language) =>
         </Highlight>
     ) : null;
 
-const Type = prop => {
+const Type = (prop: any) => {
     const { tsType, type } = prop;
     const res = (() => {
         if (tsType) {
@@ -44,12 +46,12 @@ const Type = prop => {
     return res || '';
 };
 
-const Description = prop => {
+const Description = (prop: any) => {
     const { description } = prop;
     return (
         <>
             <div>{description?.description}</div>
-            {description?.tags?.map((tag, i) => (
+            {description?.tags?.map((tag: any, i: any) => (
                 <div key={i}>
                     <div className={propsTableDescTagTitleCls}>@{tag.title}</div>
                     {tag.description}
@@ -59,8 +61,8 @@ const Description = prop => {
     );
 };
 
-const getTags = (description): { deprecated?: true; ignore?: true } => {
-    const tags = {};
+const getTags = (description: { tags: any[] }): { deprecated?: true; ignore?: true } => {
+    const tags: any = {};
     description?.tags?.forEach(tag => {
         tags[tag.title] = true;
     });

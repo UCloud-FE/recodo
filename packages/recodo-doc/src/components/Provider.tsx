@@ -34,13 +34,14 @@ const Provider = ({ content, children, scope, modules, getRemoteUrl }: ProviderP
                     const result = await content();
                     if (!mounted) return;
                     setContent(result);
-                } catch (error) {
+                } catch (error: any) {
                     console.error(error);
                     if (!mounted) return;
                     setError(error);
                 } finally {
-                    if (!mounted) return;
-                    setLoading(false);
+                    if (mounted) {
+                        setLoading(false);
+                    }
                 }
             })();
         }

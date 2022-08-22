@@ -1,11 +1,12 @@
 import path from 'path';
 import process from 'process';
 import fs from 'fs';
-import jsx from 'rollup-plugin-jsx';
+import jsx from 'acorn-jsx';
 import { terser } from 'rollup-plugin-terser';
 import tsPlugin from '@rollup/plugin-typescript';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
 
 const cwd = process.cwd();
 const resolvePath = _path => path.resolve(cwd, _path);
@@ -20,6 +21,8 @@ const defineRollupConfig = (packageInfo, { external = [] } = {}) => {
     const config = {
         input: fs.existsSync(resolvePath('./src/index.ts'))
             ? resolvePath('./src/index.ts')
+            : fs.existsSync(resolvePath('./src/index.tsx'))
+            ? resolvePath('./src/index.tsx')
             : resolvePath('./src/index.js'),
         output: [
             {
@@ -54,8 +57,9 @@ const defineRollupConfig = (packageInfo, { external = [] } = {}) => {
                 plugins: [terser()]
             }
         ],
-        plugins: [tsPlugin(), nodeResolve(), commonjs(), jsx({ factory: 'React.createElement' })],
-        external: ['react', ...external]
+        plugins: [tsPlugin(), nodeResolve(), commonjs(), json()],
+        external: ['react', ...external],
+        acornInjectPlugins: [jsx()]
     };
     config.output = config.output.map(output => ({
         ...output,
